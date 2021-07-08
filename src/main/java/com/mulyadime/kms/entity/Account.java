@@ -45,7 +45,7 @@ public class Account {
 	@JoinTable(
 			name = "account_roles",
 			joinColumns = @JoinColumn(name = "fk_account_user", referencedColumnName = "pk_account_user"),
-			inverseJoinColumns = @JoinColumn(name = "fk_account_role", referencedColumnName = "pk_role")
+			inverseJoinColumns = @JoinColumn(name = "fk_role", referencedColumnName = "pk_role")
 			)
 	private Collection<Role> roles;
 
