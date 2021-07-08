@@ -28,9 +28,9 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class HomeController {
 	
-	private static final String SIGNIN_VIEW_NAME = "/signin";
+	private static final String SIGNIN_VIEW_NAME = "signin";
 	
-	private static final String SIGNUP_VIEW_NAME = "/signup";
+	private static final String SIGNUP_VIEW_NAME = "signup";
 
 	private static final String REDIRECT_PATH = "redirect:/";
 	
