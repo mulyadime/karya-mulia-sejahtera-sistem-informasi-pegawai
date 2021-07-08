@@ -14,6 +14,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.mulyadime.kms.services.AccountService;
 
+import nz.net.ultraq.thymeleaf.LayoutDialect;
+
 /**
  * @author Hamid Mulyadi
  *
@@ -24,6 +26,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private AccountService accountService;
+	
+	@Bean
+	public LayoutDialect layoutDialect() {
+		return new LayoutDialect();
+	}
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
