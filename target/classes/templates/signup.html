@@ -1,0 +1,64 @@
+<!--
+
+=========================================================
+* Impact Design System - v1.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/impact-design-system
+* Copyright 2010 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/impact-design-system/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{_layouts/login-register-layout}">
+<head>
+	<title>Register</title>
+<body class="bg-white">
+
+	<!-- Page content -->
+    <div class="container mt--9 pb-5" layout:fragment="content">
+    	<!-- Table -->
+      	<div class="row justify-content-center">
+        	<div class="col-lg-6 col-md-8">
+          		<div class="card bg-secondary border border-soft">
+            		<div class="card-body px-lg-5 py-lg-5">
+              			<div class="text-center text-muted mb-4">
+                			<small>Sign up dengan akun anda</small>
+              			</div>
+              			<form method="post" th:action="@{/signUp}" th:object="${form}">
+                			<div class="form-group">
+                  				<div class="input-group input-group-merge input-group-alternative mb-3">
+                    				<div class="input-group-prepend">
+                      					<span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    				</div>
+                    				<input class="form-control" placeholder="Username" type="text" name="username" th:field="*{username}">
+                  				</div>
+                			</div>
+                			<div class="form-group">
+                  				<div class="input-group input-group-merge input-group-alternative">
+                    				<div class="input-group-prepend">
+                      					<span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    				</div>
+                    				<input class="form-control" placeholder="Password" type="password" name="password" th:field="*{password}">
+                  				</div>
+                			</div>
+                			<div class="text-center">
+                  				<button type="submit" class="btn btn-primary mt-4">Buat Akun</button>
+                			</div>
+              			</form>
+            		</div>
+         	 	</div>
+        	</div>
+      	</div>
+    </div>
+  
+</body>
+</html>
